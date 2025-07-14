@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: skyblue; /* light blue */
+  --text-color: #000000;
+  --card-bg: #fcd34d; /* light yellow */
+  --dm: black;
+  --dm-cl:white;
+  --foot-bg:#fcd34d;
+
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #333333;
+  --dm: white;
+  --dm-cl:black;
+  --foot-bg:#333333;
+ 
+ 
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.navbar {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+ 
+}
+.footer {
+  background-color: var(--foot-bg);
+  color: var(--text-color);
+ 
+}
+.length{
+  width:35vw;
+}
+.dm{
+  background-color: var(--dm);
+  color: var(--dm-cl);
+}
+
+ 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+.inp{
+   color: black;
+
+}
+.ht{
+  height:90vh;
+  width: .3vw;
+}
