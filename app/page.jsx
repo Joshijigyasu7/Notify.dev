@@ -13,7 +13,7 @@ export default function Home() {
     //Saves the Content To Database
     //This function sends a POST request to the server to save the note
     const HandelSubmitDb = async () => {
-    const res = await fetch('http://localhost:3000/api/blogs', {
+    const res = await fetch('/api/blogs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text: place }), 
@@ -23,7 +23,7 @@ export default function Home() {
     //It sends a GET request to the server and updates the state with the fetched notes
     const FetchNotesDb = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/blogs/fetchnote');
+      const res = await fetch('/api/blogs/fetchnote');
       const data = await res.json();
       if (data.success) {
         setnotes(data.notes);
